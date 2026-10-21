@@ -1,4 +1,1 @@
-# AsukaGaSuKi
-
-## Hello, Git!
-
+Hello,AsukaGaSuKi.
