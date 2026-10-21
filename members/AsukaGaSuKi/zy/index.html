@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>简单搜索 · Simple Search</title>
+  <meta name="description" content="一个零依赖的静态搜索网站，支持本地站点库检索与外部搜索引擎跳转。">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="page">
+    <header class="hero">
+      <h1 class="hero__title">简单搜索</h1>
+      <p class="hero__subtitle">在本地整理的站点库中检索，或跳转到外部搜索引擎</p>
+
+      <div class="tabs" id="tabs" role="tablist" aria-label="选择搜索引擎"></div>
+
+      <form class="search" id="searchForm" role="search" autocomplete="off">
+        <svg class="search__icon" viewBox="0 0 24 24" aria-hidden="true">
+          <circle cx="11" cy="11" r="7"></circle>
+          <line x1="16.5" y1="16.5" x2="21" y2="21"></line>
+        </svg>
+        <input class="search__input" id="searchInput" type="search" placeholder="输入关键词，例如：设计、python、git" aria-label="搜索关键词" spellcheck="false">
+        <button class="search__submit" id="searchSubmit" type="submit">搜索</button>
+      </form>
+
+      <p class="hint">
+        <kbd>Ctrl</kbd>+<kbd>K</kbd> 聚焦 · <kbd>↑</kbd><kbd>↓</kbd> 选择 · <kbd>Enter</kbd> 打开 · <kbd>Esc</kbd> 清空
+      </p>
+
+      <div class="recent" id="recent" hidden>
+        <span class="recent__label">最近搜索</span>
+        <div class="recent__list" id="recentList"></div>
+      </div>
+    </header>
+
+    <main class="results-wrap">
+      <p class="status" id="status" role="status" aria-live="polite"></p>
+      <ul class="results" id="results"></ul>
+      <div class="empty" id="empty" hidden>
+        <p class="empty__title">没有找到匹配的结果</p>
+        <p class="empty__desc">换个关键词试试，或者直接使用外部搜索引擎。</p>
+        <button class="empty__btn" id="emptyBtn" type="button">去 Google 搜索</button>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <span>零依赖静态站点 · 本地数据仅用于快速跳转</span>
+    </footer>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
