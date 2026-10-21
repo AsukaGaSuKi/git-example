@@ -38,6 +38,34 @@ def check_subject(text):
     return None
 
 
+def clean_text(text):
+    """去掉模板注释和标题，留下作者写的正文。"""
+    text = re.sub(r"<!--.*?-->", "", text, flags=re.S)
+    lines = []
+    for line in text.splitlines():
+        line = line.strip()
+        if not line or line.startswith("#"):
+            continue
+        lines.append(line)
+    return "\n".join(lines).strip()
+
+
+def body_content(text):
+    """去掉模板注释、标题和自查小节，判断描述里有没有实际内容。"""
+    text = re.sub(r"(?ms)^##\s*提交前自查\s*$.*?(?=^##\s|\Z)", "", text)
+    return clean_text(text)
+
+
+def section_content(text, heading):
+    """返回某个二级标题下的正文；标题不存在时返回 None。"""
+    match = re.search(
+        r"(?ms)^##\s*" + re.escape(heading) + r"\s*$(.*?)(?=^##\s|\Z)", text
+    )
+    if not match:
+        return None
+    return clean_text(match.group(1))
+
+
 if not git("rev-parse", "--verify", "origin/main"):
     errors.append("找不到 origin/main，检查无法运行，workflow 需要 fetch-depth: 0")
 
@@ -48,8 +76,12 @@ problem = check_subject(title)
 if problem:
     errors.append("PR 标题" + problem + "，现在是 " + title)
 
-if not body.strip():
-    errors.append("PR 描述为空，请写明做了什么、改了哪些文件")
+if not body_content(body):
+    errors.append("PR 描述为空，请按 PR 模板写明做了什么、改了哪些文件")
+else:
+    for heading in ("做了什么", "改了哪些文件"):
+        if section_content(body, heading) == "":
+            errors.append("PR 描述的「" + heading + "」没有填写，请按 PR 模板补充")
 
 for subject in git("log", "origin/main.." + head_ref, "--no-merges", "--format=%s").splitlines():
     problem = check_subject(subject)
