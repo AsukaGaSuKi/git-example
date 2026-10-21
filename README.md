@@ -4,9 +4,15 @@
 
 个人文件的放置规则见 [members/README.md](members/README.md)。
 
+## 贡献者
+
+[![贡献者头像](https://contrib.rocks/image?repo=mel0nyrame/git-example&max=1000)](https://github.com/mel0nyrame/git-example/graphs/contributors)
+
 ## 分支
 
-- 基于 `main` 创建，命名 `add-你的用户名`，例如 `add-octocat`。
+- 基于 `main` 创建，命名为 `<类型>/<内容>`，例如 `feat/add-profile`、`docs/update-readme`。
+- 类型限 `feat`、`fix`、`docs`、`chore`，内容不能为空，不能包含空白或额外的 `/`。
+- CI 同时兼容旧格式 `add-你的GitHub用户名`，例如 `add-octocat`；新建分支推荐使用 `<类型>/<内容>`。
 - 一个分支只提交一个 PR。
 
 ## Commit
@@ -20,23 +26,34 @@
 | `docs` | 修改说明文档 |
 | `chore` | 其他改动 |
 
-- 说明不超过 50 字符，一个 commit 只做一件事。
+- 说明使用 2–50 个字符，一个 commit 只做一件事。
 - 禁止 `update`、`111`、`test` 这类无意义说明。
 
 示例：`feat: 添加 members/octocat/octocat.md`
 
 ## PR
 
-- 只包含自己的文件，标题格式与 commit 一致。
+- 标题格式与 commit 一致，使用 `<类型>: <简短说明>`。
+- 除维护者 `mel0nyrame` 外，PR 作者只能改动 `members/自己的GitHub用户名/` 下的 `用户名.md` 和任意名称的 `.html` 文件。可以只改其中一种文件。
+- 新增、修改、删除和重命名都受此限制；不能改动其他目录，也不能提交 `.txt`、图片、符号链接、子模块或其他附加文件。
+- 维护者 `mel0nyrame` 不受文件范围限制，仍需遵守分支、commit、PR 标题和描述规范。
 - 创建 PR 时按自动带出的模板填写「做了什么」「改了哪些文件」；用命令行创建时请手动按模板填写。
 - 不要暴露真实姓名：标题、描述、文件内容和 commit 的作者名/邮箱都不要写；提交前用 `git config user.name` 和 `git config user.email` 检查。
 - 目标分支必须是原仓库的 `main`，不是你 Fork 仓库的 `main`。
 - 有冲突时在本地解决后重新提交，不要关闭重开。
 
+## 自动检查
+
+PR 会自动检查分支名、commit、标题、描述和文件范围。检查脚本为 [.github/scripts/check_pr.py](.github/scripts/check_pr.py)。权限依据 PR 作者的 GitHub 用户名判断，不依据触发检查的人或 commit 作者。
+
+检查在默认分支上运行，只读取 PR 的 Git 数据，不执行 PR 中的代码。安全边界和维护者例外的理由见 [检查权限决策](docs/adr/0001--pr-file-permissions.md)。
+
+维护检查脚本时，运行 `python3 -m unittest discover -s .github/scripts -p 'test_*.py'`。
+
 ## 提交前检查
 
 - [ ] 文件位置和命名符合 [members/README.md](members/README.md)。
-- [ ] 没有改动他人的文件，也没有提交 `.DS_Store` 等杂项。
+- [ ] 改动范围符合自己的权限，没有提交 `.DS_Store` 等杂项。
 - [ ] 分支名、commit message、PR 标题都符合本规范。
 - [ ] PR 描述按模板填写，写清了做了什么、改了哪些文件。
 - [ ] 没有暴露真实姓名。
