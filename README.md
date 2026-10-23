@@ -57,6 +57,7 @@
   <a href="https://github.com/zhy2018-maker"><img src="https://avatars.githubusercontent.com/u/344284470?s=96&amp;v=4" width="48" height="48" alt="@zhy2018-maker" title="@zhy2018-maker" /></a>
   <a href="https://github.com/GuJianXiaoZi1234"><img src="https://avatars.githubusercontent.com/u/337395395?s=96&amp;v=4" width="48" height="48" alt="@GuJianXiaoZi1234" title="@GuJianXiaoZi1234" /></a>
   <a href="https://github.com/lgq0217"><img src="https://avatars.githubusercontent.com/u/344834674?s=96&amp;v=4" width="48" height="48" alt="@lgq0217" title="@lgq0217" /></a>
+  <a href="https://github.com/taoruiran"><img src="https://avatars.githubusercontent.com/u/343581211?s=96&amp;v=4" width="48" height="48" alt="@taoruiran" title="@taoruiran" /></a>
   <a href="https://github.com/AsukaGaSuKi"><img src="https://avatars.githubusercontent.com/u/328937214?s=96&amp;v=4" width="48" height="48" alt="@AsukaGaSuKi" title="@AsukaGaSuKi" /></a>
   <a href="https://github.com/92766"><img src="https://avatars.githubusercontent.com/u/344872170?s=96&amp;v=4" width="48" height="48" alt="@92766" title="@92766" /></a>
   <a href="https://github.com/tai-xu-stra"><img src="https://avatars.githubusercontent.com/u/345073141?s=96&amp;v=4" width="48" height="48" alt="@tai-xu-stra" title="@tai-xu-stra" /></a>
@@ -79,7 +80,6 @@
   <a href="https://github.com/zwlsleep"><img src="https://avatars.githubusercontent.com/u/218932959?s=96&amp;v=4" width="48" height="48" alt="@zwlsleep" title="@zwlsleep" /></a>
   <a href="https://github.com/KA-BUT0"><img src="https://avatars.githubusercontent.com/u/308440890?s=96&amp;v=4" width="48" height="48" alt="@KA-BUT0" title="@KA-BUT0" /></a>
   <a href="https://github.com/CindyNai"><img src="https://avatars.githubusercontent.com/u/341232664?s=96&amp;v=4" width="48" height="48" alt="@CindyNai" title="@CindyNai" /></a>
-  <a href="https://github.com/taoruiran"><img src="https://avatars.githubusercontent.com/u/343581211?s=96&amp;v=4" width="48" height="48" alt="@taoruiran" title="@taoruiran" /></a>
   <a href="https://github.com/20080215lys"><img src="https://avatars.githubusercontent.com/u/344650017?s=96&amp;v=4" width="48" height="48" alt="@20080215lys" title="@20080215lys" /></a>
   <a href="https://github.com/silence-create"><img src="https://avatars.githubusercontent.com/u/344206716?s=96&amp;v=4" width="48" height="48" alt="@silence-create" title="@silence-create" /></a>
   <a href="https://github.com/SwardSaint"><img src="https://avatars.githubusercontent.com/u/345136714?s=96&amp;v=4" width="48" height="48" alt="@SwardSaint" title="@SwardSaint" /></a>
