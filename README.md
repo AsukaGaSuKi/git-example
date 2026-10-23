@@ -85,6 +85,7 @@
   <a href="https://github.com/jiang1-w"><img src="https://avatars.githubusercontent.com/u/345634707?s=96&amp;v=4" width="48" height="48" alt="@jiang1-w" title="@jiang1-w" /></a>
   <a href="https://github.com/liuziying-git-hub"><img src="https://avatars.githubusercontent.com/u/344770386?s=96&amp;v=4" width="48" height="48" alt="@liuziying-git-hub" title="@liuziying-git-hub" /></a>
   <a href="https://github.com/Orin778"><img src="https://avatars.githubusercontent.com/u/340058235?s=96&amp;v=4" width="48" height="48" alt="@Orin778" title="@Orin778" /></a>
+  <a href="https://github.com/WYJ3731"><img src="https://avatars.githubusercontent.com/u/344745765?s=96&amp;v=4" width="48" height="48" alt="@WYJ3731" title="@WYJ3731" /></a>
 </p>
 
 <!-- contributors:end -->
