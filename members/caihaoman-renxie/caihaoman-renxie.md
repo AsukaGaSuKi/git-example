@@ -1,3 +1,3 @@
 members/
 └── caihaoman-renxie/
-    └── caihaoman-renxie.txt
+    └── caihaoman-renxie.md
